@@ -71,15 +71,16 @@
     key.classList.add('playing');
   });
 
+  function removeTransition(e) {
+    if(e.propertyName !== "transition") return; 
+    this.classList.remove("playing"); // this refers to the key 
+  }
+
   const keys = document.querySelectorAll(".key");
   keys.forEach(
     key => key.addEventListener("transitionend", removeTransition)
   );
 
-  function removeTransition(e) {
-    if(e.propertyName !== "transition") return; 
-    
-  }
 
 </script>
 
