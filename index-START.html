@@ -72,8 +72,8 @@
   });
 
   function removeTransition(e) {
-    if(e.propertyName !== "transition") return; 
-    this.classList.remove("playing"); // this refers to the key 
+    if(e.propertyName !== "transform") return; 
+    e.target.classList.remove("playing"); // this refers to the key 
   }
 
   const keys = document.querySelectorAll(".key");
